@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import { StyleSheet, View, YellowBox } from "react-native";
-import ListView from "./ItemListView";
+import NestedListView from "./NestedListView";
 
 YellowBox.ignoreWarnings(["Require cycle:"]);
 
-export default function NestedList({ listItems, listWrapperStyle }) {
+export default function NestedList({
+  listItems,
+  listWrapperStyle,
+  getChildrenName,
+}) {
   const [activeSections, setActiveSections] = useState([]);
 
-  const updateActiveSection = (node) => {
-    if (node.isLastElement) {
+  const updateActiveSection = (item) => {
+    if (!item.children) {
+      console.log("THIS IS THE LAST ELEMENT");
       // ADD AN INPUT FUNCTION? like "onClickLastElement"
     } else {
       let newSelections = [...activeSections];
-      const activeElement = isNodeActive(node);
+      const activeElement = isNodeActive(item);
       if (activeElement) {
         newSelections = [
           ...searchForChildrenToRemove(newSelections, activeElement),
         ];
       } else {
-        newSelections.push(node);
+        newSelections.push(item);
       }
       setActiveSections(newSelections);
     }
@@ -39,21 +44,18 @@ export default function NestedList({ listItems, listWrapperStyle }) {
     return newSelections;
   }
 
-  function isNodeActive(node) {
-    return activeSections.find(
-      (element) => element.containerId === node.containerId
-    );
+  function isNodeActive(item) {
+    return activeSections.find((element) => element.id === item.id);
   }
 
   return (
     <>
       {listItems && (
         <View style={listWrapperStyle}>
-          <ListView
+          <NestedListView
             items={listItems}
             updateActiveSection={updateActiveSection}
             isNodeActive={isNodeActive}
-            itemContent={children}
           />
         </View>
       )}

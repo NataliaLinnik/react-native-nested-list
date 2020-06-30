@@ -1,20 +1,21 @@
 import React from "react";
 import { ScrollView } from "react-native";
-import Item from "./NestedListItem";
+import NestedListItem from "./NestedListItem";
 
-export default function ItemListView({
+export default function NestedListView({
   items,
   updateActiveSection,
   isNodeActive,
 }) {
   const renderItem = (item) => (
-    <Item
+    <NestedListItem
       key={item.id}
       item={item}
       updateActiveSection={updateActiveSection}
       isNodeActive={isNodeActive}
     />
   );
+
   return (
     <ScrollView>{items && items.map((item) => renderItem(item))}</ScrollView>
   );

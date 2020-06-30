@@ -1,11 +1,8 @@
 {
   "name": "react-native-nested-list",
   "version": "1.0.0",
-  "description": "An enhanced React Native modal",
-  "main": "dist/index.js",
-  "files": [
-    "dist/"
-  ],
+  "description": "React Native Nested List",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "Nested List",
     "slug": "react-native-nested-list",
     "platforms": [
       "ios",

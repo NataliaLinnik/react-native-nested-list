@@ -27,7 +27,8 @@
           },
           {
             "id": 123,
-            "topic": "Item 1.2.3"
+            "topic": "Item 1.2.3",
+            "children": []
           }
         ]
       }

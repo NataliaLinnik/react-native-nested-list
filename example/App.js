@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 import listItems from "./assets/listItems.json";
-import NestedList from "./dist/NestedList";
+import NestedList from "react-native-nested-list";
 
 export default function App() {
   return (
@@ -17,10 +17,8 @@ export default function App() {
             <Text style={styles.itemText}>{item.topic}</Text>
           </View>
         )}
-        onItemPressed={(item) => {}}
-        onLastItemPressed={(item) => {
-          console.log("LAST ELEMENT");
-        }}
+        onItemPressed={(item) => console.log(item.topic)}
+        onLastItemPressed={(item) => console.log(item.id)}
         opacity={0.8}
       />
     </View>

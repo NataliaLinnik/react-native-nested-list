@@ -10,8 +10,8 @@ export default function NestedList({
   childrenPath = "children",
   itemContent,
   opacity,
-  onItemPressed,
-  onLastItemPressed,
+  onItemPressed = (item) => {},
+  onLastItemPressed = (item) => {},
   itemKey,
 }) {
   const [activeSections, setActiveSections] = useState([]);

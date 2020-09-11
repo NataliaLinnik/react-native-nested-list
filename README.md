@@ -1,4 +1,4 @@
-# react-native-nested-list
+# @natalia.li/react-native-nested-list
 
 A React Native UI component for creating a customizable list with N levels of nesting.
 
@@ -15,13 +15,13 @@ You can find the code for this preview in /examples folder.
 To install this library use the package manager [npm](https://www.npmjs.com/)
 
 ```bash
-npm i react-native-nested-list
+npm i @natalia.li/react-native-nested-list
 ```
 
 or [yarn](https://yarnpkg.com/)
 
 ```bash
-yarn add react-native-nested-list
+yarn add @natalia.li/react-native-nested-list
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ yarn add react-native-nested-list
 The NestedList should be imported in the file you want to use it in.
 
 ```javascript
-import NestedList from "react-native-nested-list";
+import NestedList from "@natalia.li/react-native-nested-list";
 ```
 
 ### Define the list of items
@@ -107,7 +107,7 @@ The following code show you an entire example with proper styling. How about you
 ```javascript
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import NestedList from "react-native-nested-list";
+import NestedList from "@natalia.li/react-native-nested-list";
 
 const listItems = [
   {

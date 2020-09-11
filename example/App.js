@@ -4,7 +4,7 @@ import { Alert, StyleSheet, View, Text } from "react-native";
 import listItems from "./assets/listItems.json";
 import NestedList from "react-native-nested-list";
 
-export default function App() {
+export default function Example() {
   const getColor = (level) => {
     switch (level) {
       case 0:

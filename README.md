@@ -8,7 +8,7 @@ It works perfectly with lists of any size, including those thay cointain many it
 
 <img src="demo/nested-list_example.gif" width="250" alt="Nested List Demo"/>
 
-You can find the code for this preview in /example folder.
+You can find the code for this preview in /examples folder.
 
 ## Setup
 
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-You can find another example in the /example directory.
+You can find another example in the /examples directory.
 
 ## Available props
 

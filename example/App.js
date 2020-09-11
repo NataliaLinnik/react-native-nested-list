@@ -1,10 +1,32 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { Alert, StyleSheet, View, Text } from "react-native";
 
 import listItems from "./assets/listItems.json";
 import NestedList from "react-native-nested-list";
 
 export default function App() {
+  const getColor = (level) => {
+    switch (level) {
+      case 0:
+        return "#272640";
+      case 1:
+        return "#1b3a4b";
+      case 2:
+        return "#0b525b";
+      case 3:
+        return "#00787A";
+    }
+    return "";
+  };
+
+  const openAlert = (item) =>
+    Alert.alert(
+      "This is the last node!",
+      "You pressed " + item.topic,
+      [{ text: "OK", onPress: () => console.log("You pressed", item.topic) }],
+      { cancelable: false }
+    );
+
   return (
     <View style={styles.container}>
       <NestedList
@@ -13,12 +35,21 @@ export default function App() {
         childrenPath={"children"}
         itemKey={(item) => item.id}
         itemContent={(item) => (
-          <View style={styles.itemWrapper}>
-            <Text style={styles.itemText}>{item.topic}</Text>
+          <View
+            style={{
+              ...styles.itemWrapper,
+              backgroundColor: getColor(item.itemLevel),
+            }}
+          >
+            <Text
+              style={{ ...styles.itemText, paddingLeft: item.itemLevel * 16 }}
+            >
+              {item.topic}
+            </Text>
           </View>
         )}
-        onItemPressed={(item) => console.log(item.topic)}
-        onLastItemPressed={(item) => console.log(item.id)}
+        onItemPressed={(item) => console.log(item)}
+        onLastItemPressed={(item) => openAlert(item)}
         opacity={0.8}
       />
     </View>
@@ -41,13 +72,14 @@ const styles = StyleSheet.create({
     marginVertical: 1,
     marginHorizontal: 16,
     paddingHorizontal: 16,
+    borderRadius: 8,
   },
   listWrapper: {
     flex: 1,
     marginVertical: 48,
   },
   itemText: {
-    color: "black",
+    color: "white",
     fontSize: 14,
     marginLeft: 8,
     width: "100%",

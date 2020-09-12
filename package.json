@@ -34,17 +34,5 @@
   ],
   "author": "Natalia Linnik",
   "license": "MIT",
-  "homepage": "https://github.com/NataliaLinnik/react-native-nested-list",
-  "dependencies": {
-    "expo": "~37.0.3",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "0.62.2",
-    "react-native-web": "~0.11.7"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "babel-preset-expo": "~8.1.0",
-    "release-it": "^14.0.2"
-  }
+  "homepage": "https://github.com/NataliaLinnik/react-native-nested-list"
 }

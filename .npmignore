@@ -9,4 +9,16 @@ node_modules
 tmp
 
 # Examples
+example
 examples
+
+flow-typed
+.circleci
+.git
+.github
+coverage
+.babelrc
+.eslintcache
+.flowconfig
+.eslintignore
+CODE_OF_CONDUCT.md

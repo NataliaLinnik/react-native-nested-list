@@ -1,6 +1,13 @@
 {
-  "name": "@natalia.li/react-native-nested-list",
-  "version": "0.1.4",
+  "name": "@NataliaLinnik/react-native-nested-list",
+  "bin": {
+    "react-native-nested-list": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NataliaLinnik/react-native-nested-list"
+  },
+  "version": "0.1.5",
   "description": "React Native Nested List",
   "main": "index.js",
   "files": [
@@ -28,15 +35,11 @@
   "author": "Natalia Linnik",
   "license": "MIT",
   "homepage": "https://github.com/NataliaLinnik/react-native-nested-list",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NataliaLinnik/react-native-nested-list"
-  },
   "dependencies": {
     "expo": "~37.0.3",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+    "react-native": "0.61.4",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {

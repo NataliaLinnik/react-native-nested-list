@@ -1,5 +1,5 @@
 {
-  "name": "@NataliaLinnik/react-native-nested-list",
+  "name": "@natalia.li/react-native-nested-list",
   "bin": {
     "react-native-nested-list": "./index.js"
   },

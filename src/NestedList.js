@@ -13,6 +13,7 @@ export default function NestedList({
   onItemPressed = (item) => {},
   onLastItemPressed = (item) => {},
   itemKey,
+  keyboardShouldPersistTaps = "handled",
 }) {
   const [activeSections, setActiveSections] = useState([]);
 
@@ -65,6 +66,7 @@ export default function NestedList({
             itemContent={itemContent}
             opacity={opacity}
             itemKey={itemKey}
+            keyboardShouldPersistTaps={keyboardShouldPersistTaps},
           />
         </View>
       )}

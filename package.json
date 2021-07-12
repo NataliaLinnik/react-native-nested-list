@@ -34,5 +34,8 @@
   ],
   "author": "Natalia Linnik",
   "license": "MIT",
-  "homepage": "https://github.com/NataliaLinnik/react-native-nested-list"
+  "homepage": "https://github.com/NataliaLinnik/react-native-nested-list",
+  "devDependencies": {
+    "release-it": "^14.10.0"
+  }
 }

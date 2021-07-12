@@ -207,6 +207,8 @@ const styles = StyleSheet.create({
 });
 ```
 
+Try it out live with my sandbox implementation [here](https://codesandbox.io/s/react-nested-list-live-example-bm4w1).
+
 You can find another example in the /examples directory.
 
 ## Available props

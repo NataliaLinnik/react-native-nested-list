@@ -220,6 +220,7 @@ You can find another example in the /examples directory.
 | itemContent       | func   | node         | Y        | The item content with any elements you would like to include. Expects a function that returns a React element. Shown in examples above.        |
 | onItemPressed     | func   | (item) => {} | N        | Called when an item is pressed.                                                                                                                |
 | onLastItemPressed | func   | (item) => {} | N        | Called when an item without children is pressed.                                                                                               |
+| keyboardShouldPersistTaps | string   | 'handled' | N        | Determines when the keyboard should stay visible after a tap.                                                                                        |
 | opacity           | number | 0.2          | N        | Defines the opacity of an item on click. Accept values from 0.0 to 1.0 (see [TouchableOpacity](https://reactnative.dev/docs/touchableopacity)) |
 
 ## Acknowledgements

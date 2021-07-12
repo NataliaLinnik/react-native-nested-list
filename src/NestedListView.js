@@ -10,6 +10,7 @@ export default function NestedListView({
   itemContent,
   opacity,
   itemKey,
+  keyboardShouldPersistTaps,
 }) {
   const renderItem = (item) => (
     <NestedListItem
@@ -25,6 +26,9 @@ export default function NestedListView({
   );
 
   return (
-    <ScrollView>{items && items.map((item) => renderItem(item))}</ScrollView>
+    <ScrollView
+      keyboardShouldPersistTaps={keyboardShouldPersistTaps}
+    >
+    {items && items.map((item) => renderItem(item))}</ScrollView>
   );
 }

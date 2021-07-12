@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/NataliaLinnik/react-native-nested-list"
   },
-  "version": "0.2.1",
+  "version": "0.2.0",
   "description": "React Native Nested List",
   "main": "index.js",
   "files": [
